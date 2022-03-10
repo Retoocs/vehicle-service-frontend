@@ -17,6 +17,7 @@ import {
   QuickPanelComponentModule,
   SearchComponentModule,
   SideMenuComponentModule,
+  SideMenuContentComponentModule,
   TabsComponentModule,
   ToolbarComponentModule,
 } from '@netgrif/components';
@@ -61,6 +62,7 @@ import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-
     FlexLayoutModule,
     AuthenticationModule,
     SideMenuComponentModule,
+    SideMenuContentComponentModule,
     AuthenticationComponentModule,
     TranslateLibModule,
     LoginFormComponentModule,
