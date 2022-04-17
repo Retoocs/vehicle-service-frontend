@@ -71,37 +71,10 @@
         "path": ""
       },
       "children": {
-        "cases": {
-          "layout": {
-            "name": "caseView",
-            "params": {},
-            "enableCaseTitle": true,
-            "isCaseTitleRequired": true
-          },
-          "access": "private",
-          "navigation": {
-            "icon": "home",
-            "title": "All Cases"
-          },
-          "routing": {
-            "path": "cases"
-          }
-        },
-        "tasks": {
-          "layout": {
-            "name": "taskView",
-            "params": {}
-          },
-          "access": "private",
-          "navigation": true,
-          "routing": {
-            "path": "tasks"
-          }
-        },
-        "tabViewAllCase": {
+        "allcases": {
           "layout": {
             "name": "tabView",
-            "componentName": "tabViewAllCase",
+            "componentName": "allcases",
             "params": {
               "tabs": [
                 {
@@ -136,10 +109,181 @@
           },
           "access": "private",
           "navigation": {
-            "title": "Tab View"
+            "icon": "home",
+            "title": "All cases"
           },
           "routing": {
-            "path": "tabView"
+            "path": "allcases"
+          }
+        },
+        "vehicles": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "vehicles",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Vehicles"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "directions_car",
+            "title": "Vehicles"
+          },
+          "routing": {
+            "path": "vehicles"
+          }
+        },
+        "customers": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "customers",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Customers"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "people_alt",
+            "title": "Customers"
+          },
+          "routing": {
+            "path": "customers"
+          }
+        },
+        "warehouses": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "warehouses",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Warehouses"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "warehouse",
+            "title": "Warehouses"
+          },
+          "routing": {
+            "path": "warehouses"
+          }
+        },
+        "repairs": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "repairs",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Repairs"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "car_repair",
+            "title": "Repairs"
+          },
+          "routing": {
+            "path": "repairs"
+          }
+        },
+        "requests": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "requests",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Requests"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "mark_email_unread",
+            "title": "Requests"
+          },
+          "routing": {
+            "path": "requests"
           }
         },
         "emptyView": {
