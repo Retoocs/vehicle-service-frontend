@@ -7,6 +7,7 @@ import {EmptyViewComponent} from './views/side-nav/emptyView/empty-view.componen
 import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-all-case.component';
 import {VehiclesComponent} from './views/side-nav/vehicles/vehicles-case.component';
 import {CustomersComponent} from './views/side-nav/customers/customers-case.component';
+import {WarehousesComponent} from './views/side-nav/warehouses/warehouses-case.component';
 
 
 @Injectable({
@@ -20,6 +21,7 @@ export class TemplateFrontendViewService extends ViewService {
       {id: 'TabViewAllCaseComponent', class: TabViewAllCaseComponent},
       {id: 'VehiclesComponent', class: VehiclesComponent},
       {id: 'CustomersComponent', class: CustomersComponent},
+      {id: 'WarehousesComponent', class: WarehousesComponent},
       {id: 'EmptyViewComponent', class: EmptyViewComponent},
       {id: 'SidenavComponent', class: SidenavComponent},
       {id: 'LoginComponent', class: LoginComponent}

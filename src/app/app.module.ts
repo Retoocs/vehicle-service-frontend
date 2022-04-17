@@ -50,6 +50,13 @@ import {
   SideNavCustomersContent1CaseViewComponent
 } from './views/side-nav/customers/content/1/side-nav-customers-content1-case-view.component';
 import {CustomersComponent} from './views/side-nav/customers/customers-case.component';
+import {
+  SideNavWarehousesContent0TaskViewComponent
+} from './views/side-nav/warehouses/content/0/side-nav-warehouses-content0-task-view.component';
+import {
+  SideNavWarehousesContent1CaseViewComponent
+} from './views/side-nav/warehouses/content/1/side-nav-warehouses-content1-case-view.component';
+import {WarehousesComponent} from './views/side-nav/warehouses/warehouses-case.component';
 
 
 @NgModule({
@@ -68,6 +75,9 @@ import {CustomersComponent} from './views/side-nav/customers/customers-case.comp
     SideNavCustomersContent0TaskViewComponent,
     SideNavCustomersContent1CaseViewComponent,
     CustomersComponent,
+    SideNavWarehousesContent0TaskViewComponent,
+    SideNavWarehousesContent1CaseViewComponent,
+    WarehousesComponent,
   ],
   imports: [
     BrowserModule,
@@ -111,6 +121,9 @@ import {CustomersComponent} from './views/side-nav/customers/customers-case.comp
     SideNavCustomersContent0TaskViewComponent,
     SideNavCustomersContent1CaseViewComponent,
     CustomersComponent,
+    SideNavWarehousesContent0TaskViewComponent,
+    SideNavWarehousesContent1CaseViewComponent,
+    WarehousesComponent,
   ]
 })
 export class AppModule {

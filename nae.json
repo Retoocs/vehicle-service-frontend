@@ -181,6 +181,39 @@
             "path": "customers"
           }
         },
+        "warehouses": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "warehouses",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Warehouses"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "title": "Warehouses"
+          },
+          "routing": {
+            "path": "warehouses"
+          }
+        },
         "emptyView": {
           "layout": {
             "name": "emptyView",
