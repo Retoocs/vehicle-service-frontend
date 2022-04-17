@@ -12,7 +12,7 @@ export class AppComponent {
 
   constructor(private _languageService: LanguageService, private translate: LanguageService,
               private routingBuilder: RoutingBuilderService, private auth: AuthenticationService) {
-    this._languageService.setLanguage('sk-SK');
+    this._languageService.setLanguage('en-EN');
   }
 
   isAuthenticated(): boolean {
