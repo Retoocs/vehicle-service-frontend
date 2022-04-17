@@ -64,6 +64,13 @@ import {
   SideNavRepairsContent1CaseViewComponent
 } from './views/side-nav/repairs/content/1/side-nav-repairs-content1-case-view.component';
 import {RepairsComponent} from './views/side-nav/repairs/repairs-case.component';
+import {
+  SideNavRequestsContent0TaskViewComponent
+} from './views/side-nav/requests/content/0/side-nav-requests-content0-task-view.component';
+import {
+  SideNavRequestsContent1CaseViewComponent
+} from './views/side-nav/requests/content/1/side-nav-requests-content1-case-view.component';
+import {RequestsComponent} from './views/side-nav/requests/requests-case.component';
 
 
 @NgModule({
@@ -88,6 +95,9 @@ import {RepairsComponent} from './views/side-nav/repairs/repairs-case.component'
     SideNavRepairsContent0TaskViewComponent,
     SideNavRepairsContent1CaseViewComponent,
     RepairsComponent,
+    SideNavRequestsContent0TaskViewComponent,
+    SideNavRequestsContent1CaseViewComponent,
+    RequestsComponent,
   ],
   imports: [
     BrowserModule,
@@ -137,6 +147,9 @@ import {RepairsComponent} from './views/side-nav/repairs/repairs-case.component'
     SideNavRepairsContent0TaskViewComponent,
     SideNavRepairsContent1CaseViewComponent,
     RepairsComponent,
+    SideNavRequestsContent0TaskViewComponent,
+    SideNavRequestsContent1CaseViewComponent,
+    RequestsComponent,
   ]
 })
 export class AppModule {
