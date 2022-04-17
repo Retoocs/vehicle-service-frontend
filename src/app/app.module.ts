@@ -27,15 +27,15 @@ import {LoginComponent} from './views/login/login.component';
 import {SidenavComponent} from './views/side-nav/sidenav.component';
 import {EmptyViewComponent} from './views/side-nav/emptyView/empty-view.component';
 import {
-  SideNavTabviewallcaseContent0TaskViewComponent
-} from './views/side-nav/tabViewAllCase/content/0/side-nav-tabviewallcase-content0-task-view.component';
+  SideNavAllcasesContent0TaskViewComponent
+} from './views/side-nav/allCases/content/0/side-nav-allcases-content0-task-view.component';
 import {
-  SideNavTabviewallcaseContent1CaseViewComponent
-} from './views/side-nav/tabViewAllCase/content/1/side-nav-tabviewallcase-content1-case-view.component';
+  SideNavAllcasesContent1CaseViewComponent
+} from './views/side-nav/allCases/content/1/side-nav-allcases-content1-case-view.component';
 import {
-  SideNavTabviewallcaseContent2CaseViewComponent
-} from './views/side-nav/tabViewAllCase/content/2/side-nav-tabviewallcase-content2-case-view.component';
-import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-all-case.component';
+  SideNavAllcasesContent2CaseViewComponent
+} from './views/side-nav/allCases/content/2/side-nav-allcases-content2-case-view.component';
+import {AllcasesComponent} from './views/side-nav/allCases/allcases.component';
 import {
   SideNavVehiclesContent0TaskViewComponent
 } from './views/side-nav/vehicles/content/0/side-nav-vehicles-content0-task-view.component';
@@ -79,10 +79,10 @@ import {RequestsComponent} from './views/side-nav/requests/requests-case.compone
     LoginComponent,
     SidenavComponent,
     EmptyViewComponent,
-    SideNavTabviewallcaseContent0TaskViewComponent,
-    SideNavTabviewallcaseContent1CaseViewComponent,
-    SideNavTabviewallcaseContent2CaseViewComponent,
-    TabViewAllCaseComponent,
+    SideNavAllcasesContent0TaskViewComponent,
+    SideNavAllcasesContent1CaseViewComponent,
+    SideNavAllcasesContent2CaseViewComponent,
+    AllcasesComponent,
     SideNavVehiclesContent0TaskViewComponent,
     SideNavVehiclesContent1CaseViewComponent,
     VehiclesComponent,
@@ -131,10 +131,10 @@ import {RequestsComponent} from './views/side-nav/requests/requests-case.compone
     LoginComponent,
     SidenavComponent,
     EmptyViewComponent,
-    SideNavTabviewallcaseContent0TaskViewComponent,
-    SideNavTabviewallcaseContent1CaseViewComponent,
-    SideNavTabviewallcaseContent2CaseViewComponent,
-    TabViewAllCaseComponent,
+    SideNavAllcasesContent0TaskViewComponent,
+    SideNavAllcasesContent1CaseViewComponent,
+    SideNavAllcasesContent2CaseViewComponent,
+    AllcasesComponent,
     SideNavVehiclesContent0TaskViewComponent,
     SideNavVehiclesContent1CaseViewComponent,
     VehiclesComponent,

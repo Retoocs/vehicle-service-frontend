@@ -1,5 +1,5 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {SideNavTabviewallcaseContent0TaskViewComponent} from './side-nav-tabviewallcase-content0-task-view.component';
+import {SideNavAllcasesContent0TaskViewComponent} from './side-nav-allcases-content0-task-view.component';
 import {
   AuthenticationMethodService,
   ConfigurationService,
@@ -12,9 +12,9 @@ import {HeaderComponentModule, PanelComponentModule,} from '@netgrif/components'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TemplateFrontendConfigurationService} from '../../../../../template-frontend-configuration.service';
 
-describe('SideNavTabviewallcaseContent0TaskViewComponent', () => {
-  let component: SideNavTabviewallcaseContent0TaskViewComponent;
-  let fixture: ComponentFixture<SideNavTabviewallcaseContent0TaskViewComponent>;
+describe('SideNavAllcasesContent0TaskViewComponent', () => {
+  let component: SideNavAllcasesContent0TaskViewComponent;
+  let fixture: ComponentFixture<SideNavAllcasesContent0TaskViewComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -29,13 +29,13 @@ describe('SideNavTabviewallcaseContent0TaskViewComponent', () => {
         AuthenticationMethodService,
         {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService}
       ],
-      declarations: [SideNavTabviewallcaseContent0TaskViewComponent]
+      declarations: [SideNavAllcasesContent0TaskViewComponent]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SideNavTabviewallcaseContent0TaskViewComponent);
+    fixture = TestBed.createComponent(SideNavAllcasesContent0TaskViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

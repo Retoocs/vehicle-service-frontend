@@ -1,5 +1,5 @@
 import {ComponentFixture, TestBed, waitForAsync} from '@angular/core/testing';
-import {SideNavTabviewallcaseContent1CaseViewComponent} from './side-nav-tabviewallcase-content1-case-view.component';
+import {SideNavAllcasesContent1CaseViewComponent} from './side-nav-allcases-content1-case-view.component';
 import {
   AuthenticationMethodService,
   CaseHeaderService,
@@ -14,9 +14,9 @@ import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {TemplateFrontendConfigurationService} from '../../../../../template-frontend-configuration.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-describe('SideNavTabviewallcaseContent1CaseViewComponent', () => {
-  let component: SideNavTabviewallcaseContent1CaseViewComponent;
-  let fixture: ComponentFixture<SideNavTabviewallcaseContent1CaseViewComponent>;
+describe('SideNavAllcasesContent1CaseViewComponent', () => {
+  let component: SideNavAllcasesContent1CaseViewComponent;
+  let fixture: ComponentFixture<SideNavAllcasesContent1CaseViewComponent>;
 
   beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
@@ -32,14 +32,14 @@ describe('SideNavTabviewallcaseContent1CaseViewComponent', () => {
         {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService},
         CaseHeaderService
       ],
-      declarations: [SideNavTabviewallcaseContent1CaseViewComponent],
+      declarations: [SideNavAllcasesContent1CaseViewComponent],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
       .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(SideNavTabviewallcaseContent1CaseViewComponent);
+    fixture = TestBed.createComponent(SideNavAllcasesContent1CaseViewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

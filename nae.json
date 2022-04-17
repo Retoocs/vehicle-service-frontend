@@ -71,10 +71,10 @@
         "path": ""
       },
       "children": {
-        "tabViewAllCase": {
+        "allcases": {
           "layout": {
             "name": "tabView",
-            "componentName": "tabViewAllCase",
+            "componentName": "allcases",
             "params": {
               "tabs": [
                 {
@@ -109,10 +109,11 @@
           },
           "access": "private",
           "navigation": {
-            "title": "Tab View"
+            "icon": "home",
+            "title": "All cases"
           },
           "routing": {
-            "path": "tabView"
+            "path": "allcases"
           }
         },
         "vehicles": {
@@ -142,6 +143,7 @@
           },
           "access": "private",
           "navigation": {
+            "icon": "directions_car",
             "title": "Vehicles"
           },
           "routing": {
@@ -175,6 +177,7 @@
           },
           "access": "private",
           "navigation": {
+            "icon": "people_alt",
             "title": "Customers"
           },
           "routing": {
@@ -208,6 +211,7 @@
           },
           "access": "private",
           "navigation": {
+            "icon": "warehouse",
             "title": "Warehouses"
           },
           "routing": {
@@ -241,6 +245,7 @@
           },
           "access": "private",
           "navigation": {
+            "icon": "car_repair",
             "title": "Repairs"
           },
           "routing": {
@@ -274,6 +279,7 @@
           },
           "access": "private",
           "navigation": {
+            "icon": "mark_email_unread",
             "title": "Requests"
           },
           "routing": {

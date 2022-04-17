@@ -29,9 +29,9 @@ const baseFilterFactory = (userService: UserService) => {
 };
 
 @Component({
-  selector: 'app-side-nav-tabviewallcase-content2-case-view',
-  templateUrl: './side-nav-tabviewallcase-content2-case-view.component.html',
-  styleUrls: ['./side-nav-tabviewallcase-content2-case-view.component.scss'],
+  selector: 'app-side-nav-allcases-content2-case-view',
+  templateUrl: './side-nav-allcases-content2-case-view.component.html',
+  styleUrls: ['./side-nav-allcases-content2-case-view.component.scss'],
   providers: [
     CategoryFactory,
     CaseViewService,
@@ -51,7 +51,7 @@ const baseFilterFactory = (userService: UserService) => {
     {provide: NAE_SEARCH_CATEGORIES, useFactory: defaultCaseSearchCategoriesFactory, deps: [CategoryFactory]},
   ]
 })
-export class SideNavTabviewallcaseContent2CaseViewComponent extends TabbedCaseView implements AfterViewInit {
+export class SideNavAllcasesContent2CaseViewComponent extends TabbedCaseView implements AfterViewInit {
 
   @ViewChild('header') public caseHeaderComponent: HeaderComponent;
 
