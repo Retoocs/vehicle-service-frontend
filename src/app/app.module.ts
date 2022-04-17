@@ -57,6 +57,13 @@ import {
   SideNavWarehousesContent1CaseViewComponent
 } from './views/side-nav/warehouses/content/1/side-nav-warehouses-content1-case-view.component';
 import {WarehousesComponent} from './views/side-nav/warehouses/warehouses-case.component';
+import {
+  SideNavRepairsContent0TaskViewComponent
+} from './views/side-nav/repairs/content/0/side-nav-repairs-content0-task-view.component';
+import {
+  SideNavRepairsContent1CaseViewComponent
+} from './views/side-nav/repairs/content/1/side-nav-repairs-content1-case-view.component';
+import {RepairsComponent} from './views/side-nav/repairs/repairs-case.component';
 
 
 @NgModule({
@@ -78,6 +85,9 @@ import {WarehousesComponent} from './views/side-nav/warehouses/warehouses-case.c
     SideNavWarehousesContent0TaskViewComponent,
     SideNavWarehousesContent1CaseViewComponent,
     WarehousesComponent,
+    SideNavRepairsContent0TaskViewComponent,
+    SideNavRepairsContent1CaseViewComponent,
+    RepairsComponent,
   ],
   imports: [
     BrowserModule,
@@ -124,6 +134,9 @@ import {WarehousesComponent} from './views/side-nav/warehouses/warehouses-case.c
     SideNavWarehousesContent0TaskViewComponent,
     SideNavWarehousesContent1CaseViewComponent,
     WarehousesComponent,
+    SideNavRepairsContent0TaskViewComponent,
+    SideNavRepairsContent1CaseViewComponent,
+    RepairsComponent,
   ]
 })
 export class AppModule {
