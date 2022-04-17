@@ -3,7 +3,7 @@ import {NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {AppRoutingModule} from './app-routing.module';
-import {AuthenticationModule, ConfigurationService, MaterialModule, TranslateLibModule, ViewService,} from '@netgrif/components-core';
+import {AuthenticationModule, ConfigurationService, MaterialModule, TranslateLibModule, ViewService} from '@netgrif/components-core';
 import {FlexLayoutModule, FlexModule} from '@angular/flex-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
@@ -36,6 +36,13 @@ import {
   SideNavTabviewallcaseContent2CaseViewComponent
 } from './views/side-nav/tabViewAllCase/content/2/side-nav-tabviewallcase-content2-case-view.component';
 import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-all-case.component';
+import {
+  SideNavVehiclesContent0TaskViewComponent
+} from './views/side-nav/vehicles/content/0/side-nav-vehicles-content0-task-view.component';
+import {
+  SideNavVehiclesContent1CaseViewComponent
+} from './views/side-nav/vehicles/content/1/side-nav-vehicles-content1-case-view.component';
+import {VehiclesComponent} from './views/side-nav/vehicles/vehicles-case.component';
 
 
 @NgModule({
@@ -48,6 +55,9 @@ import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-
     SideNavTabviewallcaseContent1CaseViewComponent,
     SideNavTabviewallcaseContent2CaseViewComponent,
     TabViewAllCaseComponent,
+    SideNavVehiclesContent0TaskViewComponent,
+    SideNavVehiclesContent1CaseViewComponent,
+    VehiclesComponent,
   ],
   imports: [
     BrowserModule,
@@ -76,7 +86,19 @@ import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-
     {provide: ViewService, useClass: TemplateFrontendViewService}
   ],
   bootstrap: [AppComponent],
-  entryComponents: [NewCaseComponent, LoginComponent, SidenavComponent, EmptyViewComponent, SideNavTabviewallcaseContent0TaskViewComponent, SideNavTabviewallcaseContent1CaseViewComponent, SideNavTabviewallcaseContent2CaseViewComponent, TabViewAllCaseComponent]
+  entryComponents: [
+    NewCaseComponent,
+    LoginComponent,
+    SidenavComponent,
+    EmptyViewComponent,
+    SideNavTabviewallcaseContent0TaskViewComponent,
+    SideNavTabviewallcaseContent1CaseViewComponent,
+    SideNavTabviewallcaseContent2CaseViewComponent,
+    TabViewAllCaseComponent,
+    SideNavVehiclesContent0TaskViewComponent,
+    SideNavVehiclesContent1CaseViewComponent,
+    VehiclesComponent,
+  ]
 })
 export class AppModule {
 }
