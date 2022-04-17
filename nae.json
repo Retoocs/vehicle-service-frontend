@@ -148,6 +148,39 @@
             "path": "vehicles"
           }
         },
+        "customers": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "customers",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Customers"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "title": "Customers"
+          },
+          "routing": {
+            "path": "customers"
+          }
+        },
         "emptyView": {
           "layout": {
             "name": "emptyView",
