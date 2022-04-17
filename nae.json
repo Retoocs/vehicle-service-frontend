@@ -71,33 +71,6 @@
         "path": ""
       },
       "children": {
-        "cases": {
-          "layout": {
-            "name": "caseView",
-            "params": {},
-            "enableCaseTitle": true,
-            "isCaseTitleRequired": true
-          },
-          "access": "private",
-          "navigation": {
-            "icon": "home",
-            "title": "All Cases"
-          },
-          "routing": {
-            "path": "cases"
-          }
-        },
-        "tasks": {
-          "layout": {
-            "name": "taskView",
-            "params": {}
-          },
-          "access": "private",
-          "navigation": true,
-          "routing": {
-            "path": "tasks"
-          }
-        },
         "tabViewAllCase": {
           "layout": {
             "name": "tabView",

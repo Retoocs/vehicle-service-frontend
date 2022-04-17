@@ -25,8 +25,6 @@ import {TemplateFrontendConfigurationService} from './template-frontend-configur
 import {TemplateFrontendViewService} from './template-frontend-view.service';
 import {LoginComponent} from './views/login/login.component';
 import {SidenavComponent} from './views/side-nav/sidenav.component';
-import {SideNavCasesCaseViewComponent} from './views/side-nav/cases/side-nav-cases-case-view.component';
-import {SideNavTasksTaskViewComponent} from './views/side-nav/tasks/side-nav-tasks-task-view.component';
 import {EmptyViewComponent} from './views/side-nav/emptyView/empty-view.component';
 import {
   SideNavTabviewallcaseContent0TaskViewComponent
@@ -45,8 +43,6 @@ import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-
     AppComponent,
     LoginComponent,
     SidenavComponent,
-    SideNavCasesCaseViewComponent,
-    SideNavTasksTaskViewComponent,
     EmptyViewComponent,
     SideNavTabviewallcaseContent0TaskViewComponent,
     SideNavTabviewallcaseContent1CaseViewComponent,
@@ -80,7 +76,7 @@ import {TabViewAllCaseComponent} from './views/side-nav/tabViewAllCase/tab-view-
     {provide: ViewService, useClass: TemplateFrontendViewService}
   ],
   bootstrap: [AppComponent],
-  entryComponents: [NewCaseComponent, LoginComponent, SidenavComponent, SideNavCasesCaseViewComponent, SideNavTasksTaskViewComponent, EmptyViewComponent, SideNavTabviewallcaseContent0TaskViewComponent, SideNavTabviewallcaseContent1CaseViewComponent, SideNavTabviewallcaseContent2CaseViewComponent, TabViewAllCaseComponent]
+  entryComponents: [NewCaseComponent, LoginComponent, SidenavComponent, EmptyViewComponent, SideNavTabviewallcaseContent0TaskViewComponent, SideNavTabviewallcaseContent1CaseViewComponent, SideNavTabviewallcaseContent2CaseViewComponent, TabViewAllCaseComponent]
 })
 export class AppModule {
 }
