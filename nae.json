@@ -317,6 +317,20 @@
             "path": "invite"
           }
         },
+        "role-assignment": {
+          "layout": {
+            "name": "role-assignment",
+            "componentName": "RoleAssignment"
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "add",
+            "title": "Role assignment"
+          },
+          "routing": {
+            "path": "role-assignment"
+          }
+        },
         "emptyView": {
           "layout": {
             "name": "emptyView",

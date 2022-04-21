@@ -76,6 +76,7 @@ import {
 import {RequestsComponent} from './views/side-nav/requests/requests-case.component';
 import {UserInviteComponent} from './views/side-nav/userInvite/user-invite.component';
 import {SignupComponent} from './views/signup/signup.component';
+import {RoleAssignmentComponent} from './views/side-nav/roleAssignment/role-assignment.component';
 
 
 @NgModule({
@@ -105,6 +106,7 @@ import {SignupComponent} from './views/signup/signup.component';
     RequestsComponent,
     UserInviteComponent,
     SignupComponent,
+    RoleAssignmentComponent,
   ],
   imports: [
     BrowserModule,
@@ -162,6 +164,7 @@ import {SignupComponent} from './views/signup/signup.component';
     RequestsComponent,
     UserInviteComponent,
     SignupComponent,
+    RoleAssignmentComponent,
   ]
 })
 export class AppModule {

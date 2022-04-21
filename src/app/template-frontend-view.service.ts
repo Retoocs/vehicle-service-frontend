@@ -12,6 +12,7 @@ import {WarehousesComponent} from './views/side-nav/warehouses/warehouses-case.c
 import {RepairsComponent} from './views/side-nav/repairs/repairs-case.component';
 import {RequestsComponent} from './views/side-nav/requests/requests-case.component';
 import {UserInviteComponent} from './views/side-nav/userInvite/user-invite.component';
+import {RoleAssignmentComponent} from './views/side-nav/roleAssignment/role-assignment.component';
 
 
 @Injectable({
@@ -32,6 +33,7 @@ export class TemplateFrontendViewService extends ViewService {
       {id: 'SidenavComponent', class: SidenavComponent},
       {id: 'LoginComponent', class: LoginComponent},
       {id: 'SignupComponent', class: SignupComponent},
+      {id: 'RoleAssignmentComponent', class: RoleAssignmentComponent},
       {id: 'UserInviteComponent', class: UserInviteComponent}
 
     ], configurationService, router, loggerService);
