@@ -8,7 +8,9 @@
       "endpoints": {
         "login": "/auth/login",
         "logout": "/auth/logout",
-        "signup": "/auth/signup"
+        "signup": "/auth/signup",
+        "invite": "/auth/invite",
+        "verify": "/auth/token/verify"
       },
       "sessionBearer": "X-Auth-Token"
     },
@@ -49,6 +51,21 @@
       "navigation": false,
       "routing": {
         "path": "login"
+      }
+    },
+    "signup": {
+      "layout": {
+        "name": "signup",
+        "componentName": "Signup"
+      },
+      "component": {
+        "class": "SignupComponent",
+        "from": "./views/signup/signup.component"
+      },
+      "access": "public",
+      "navigation": false,
+      "routing": {
+        "path": "signup/:token"
       }
     },
     "side-nav": {
@@ -286,6 +303,20 @@
             "path": "requests"
           }
         },
+        "user-invite": {
+          "layout": {
+            "name": "user-invite",
+            "componentName": "UserInvite"
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "send",
+            "title": "User invite"
+          },
+          "routing": {
+            "path": "invite"
+          }
+        },
         "emptyView": {
           "layout": {
             "name": "emptyView",
@@ -342,6 +373,10 @@
       "publishers": [
         "console"
       ]
+    },
+    "legal": {
+      "termsOfService": "https://netgrif.com/",
+      "privacyPolicy": "https://netgrif.com/"
     }
   }
 }
