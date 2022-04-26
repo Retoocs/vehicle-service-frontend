@@ -308,7 +308,11 @@
             "name": "user-invite",
             "componentName": "UserInvite"
           },
-          "access": "private",
+          "access": {
+            "role": [
+              "is_admin.Admin"
+            ]
+          },
           "navigation": {
             "icon": "send",
             "title": "User invite"
@@ -322,27 +326,17 @@
             "name": "role-assignment",
             "componentName": "RoleAssignment"
           },
-          "access": "private",
+          "access": {
+            "role": [
+              "is_admin.Admin"
+            ]
+          },
           "navigation": {
             "icon": "add",
             "title": "Role assignment"
           },
           "routing": {
             "path": "role-assignment"
-          }
-        },
-        "emptyView": {
-          "layout": {
-            "name": "emptyView",
-            "componentName": "EmptyView"
-          },
-          "access": "private",
-          "navigation": {
-            "icon": "clear",
-            "title": "EmptyView"
-          },
-          "routing": {
-            "path": "settings"
           }
         }
       }

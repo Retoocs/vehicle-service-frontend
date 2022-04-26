@@ -78,7 +78,6 @@ import {UserInviteComponent} from './views/side-nav/userInvite/user-invite.compo
 import {SignupComponent} from './views/signup/signup.component';
 import {RoleAssignmentComponent} from './views/side-nav/roleAssignment/role-assignment.component';
 
-
 @NgModule({
   declarations: [
     AppComponent,
