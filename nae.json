@@ -8,7 +8,9 @@
       "endpoints": {
         "login": "/auth/login",
         "logout": "/auth/logout",
-        "signup": "/auth/signup"
+        "signup": "/auth/signup",
+        "invite": "/auth/invite",
+        "verify": "/auth/token/verify"
       },
       "sessionBearer": "X-Auth-Token"
     },
@@ -49,6 +51,21 @@
       "navigation": false,
       "routing": {
         "path": "login"
+      }
+    },
+    "signup": {
+      "layout": {
+        "name": "signup",
+        "componentName": "Signup"
+      },
+      "component": {
+        "class": "SignupComponent",
+        "from": "./views/signup/signup.component"
+      },
+      "access": "public",
+      "navigation": false,
+      "routing": {
+        "path": "signup/:token"
       }
     },
     "side-nav": {
@@ -286,18 +303,40 @@
             "path": "requests"
           }
         },
-        "emptyView": {
+        "user-invite": {
           "layout": {
-            "name": "emptyView",
-            "componentName": "EmptyView"
+            "name": "user-invite",
+            "componentName": "UserInvite"
           },
-          "access": "private",
+          "access": {
+            "role": [
+              "is_admin.Admin"
+            ]
+          },
           "navigation": {
-            "icon": "clear",
-            "title": "EmptyView"
+            "icon": "send",
+            "title": "User invite"
           },
           "routing": {
-            "path": "settings"
+            "path": "invite"
+          }
+        },
+        "role-assignment": {
+          "layout": {
+            "name": "role-assignment",
+            "componentName": "RoleAssignment"
+          },
+          "access": {
+            "role": [
+              "is_admin.Admin"
+            ]
+          },
+          "navigation": {
+            "icon": "add",
+            "title": "Role assignment"
+          },
+          "routing": {
+            "path": "role-assignment"
           }
         }
       }
@@ -342,6 +381,10 @@
       "publishers": [
         "console"
       ]
+    },
+    "legal": {
+      "termsOfService": "https://netgrif.com/",
+      "privacyPolicy": "https://netgrif.com/"
     }
   }
 }
