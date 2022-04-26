@@ -10,6 +10,7 @@ import {
   NAE_BASE_FILTER,
   NAE_SEARCH_CATEGORIES,
   NAE_TAB_DATA,
+  PetriNetSearchRequest,
   SearchService,
   SimpleFilter,
   TabbedCaseView,
@@ -18,12 +19,37 @@ import {
 import {HeaderComponent} from '@netgrif/components';
 
 const localAllowedNetsFactory = (factory: AllowedNetsServiceFactory) => {
-  return factory.createWithAllNets();
+  return factory.createFromArray(NETS);
 };
+
+const NETS = [
+  'child_enum_addresses',
+  'child_enum_vehicles',
+  'main_enum_addresses',
+  'main_enum_vehicles',
+  'ri_to_wi',
+  'wi_to_ri',
+  'customer',
+  'notification',
+  'repair_item',
+  'repair',
+  'vehicle',
+  'warehouse_item',
+  'warehouse'];
+
+const buildFormProcessQuery = (processIdentifiers = NETS): Array<PetriNetSearchRequest> => {
+  const query = [];
+  processIdentifiers.forEach((petriNet) => {
+    query.push({ identifier: petriNet });
+  });
+  return query;
+}
 
 const baseFilterFactory = () => {
   return {
-    filter: SimpleFilter.emptyCaseFilter()
+    filter: SimpleFilter.fromCaseQuery({
+      process: buildFormProcessQuery(),
+    })
   };
 };
 

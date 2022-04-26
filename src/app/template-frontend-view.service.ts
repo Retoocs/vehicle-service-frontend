@@ -4,7 +4,8 @@ import {ConfigurationService, LoggerService, ViewService} from '@netgrif/compone
 import {LoginComponent} from './views/login/login.component';
 import {SidenavComponent} from './views/side-nav/sidenav.component';
 import {EmptyViewComponent} from './views/side-nav/emptyView/empty-view.component';
-import {AllcasesComponent} from './views/side-nav/allCases/allcases.component';
+import { AllcasesComponent } from './views/side-nav/allCases/allcases.component';
+import { AllcasesAdminComponent } from './views/side-nav/allCasesAdmin/allcases.admin.component';
 import {VehiclesComponent} from './views/side-nav/vehicles/vehicles-case.component';
 import {CustomersComponent} from './views/side-nav/customers/customers-case.component';
 import {WarehousesComponent} from './views/side-nav/warehouses/warehouses-case.component';
@@ -21,6 +22,7 @@ export class TemplateFrontendViewService extends ViewService {
     // If you want to add views to the application run the 'create-view' schematic.
     super([
       {id: 'AllcasesComponent', class: AllcasesComponent},
+      {id: 'AllcasesAdminComponent', class: AllcasesAdminComponent},
       {id: 'VehiclesComponent', class: VehiclesComponent},
       {id: 'CustomersComponent', class: CustomersComponent},
       {id: 'WarehousesComponent', class: WarehousesComponent},
