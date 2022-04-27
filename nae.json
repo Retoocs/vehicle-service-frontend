@@ -3,7 +3,7 @@
   "extends": "nae-default",
   "providers": {
     "auth": {
-      "address": "http://autoservis.bawix.com:8080/api",
+      "address": "http://autoservis.bawix.xyz/api",
       "authentication": "Basic",
       "endpoints": {
         "login": "/auth/login",
@@ -17,23 +17,23 @@
     "resources": [
       {
         "name": "main",
-        "address": "http://autoservis.bawix.com/api"
+        "address": "http://autoservis.bawix.xyz/api"
       },
       {
         "name": "case",
-        "address": "http://autoservis.bawix.com/api"
+        "address": "http://autoservis.bawix.xyz/api"
       },
       {
         "name": "task",
-        "address": "http://autoservis.bawix.com/api"
+        "address": "http://autoservis.bawix.xyz/api"
       },
       {
         "name": "petrinet",
-        "address": "http://autoservis.bawix.com/api"
+        "address": "http://autoservis.bawix.xyz/api"
       },
       {
         "name": "user",
-        "address": "http://autoservis.bawix.com/api"
+        "address": "http://autoservis.bawix.xyz/api"
       }
     ]
   },
