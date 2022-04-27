@@ -3,7 +3,7 @@
   "extends": "nae-default",
   "providers": {
     "auth": {
-      "address": "http://localhost:8080/api",
+      "address": "http://autoservis.bawix.com:8080/api",
       "authentication": "Basic",
       "endpoints": {
         "login": "/auth/login",
@@ -17,23 +17,23 @@
     "resources": [
       {
         "name": "main",
-        "address": "http://localhost:8080/api"
+        "address": "http://autoservis.bawix.com/api"
       },
       {
         "name": "case",
-        "address": "http://localhost:8080/api"
+        "address": "http://autoservis.bawix.com/api"
       },
       {
         "name": "task",
-        "address": "http://localhost:8080/api"
+        "address": "http://autoservis.bawix.com/api"
       },
       {
         "name": "petrinet",
-        "address": "http://localhost:8080/api"
+        "address": "http://autoservis.bawix.com/api"
       },
       {
         "name": "user",
-        "address": "http://localhost:8080/api"
+        "address": "http://autoservis.bawix.com/api"
       }
     ]
   },
@@ -440,8 +440,8 @@
       ]
     },
     "legal": {
-      "termsOfService": "https://netgrif.com/",
-      "privacyPolicy": "https://netgrif.com/"
+      "termsOfService": "https://msus.vamapp.sk/",
+      "privacyPolicy": "https://msus.vamapp.sk/"
     }
   }
 }
