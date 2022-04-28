@@ -14,6 +14,7 @@ import {
   SimpleFilter, SnackBarService,
   TabbedCaseView,
   ViewIdService,
+  NAE_DEFAULT_HEADERS,
 } from '@netgrif/components-core';
 import {HeaderComponent} from '@netgrif/components';
 import {TranslateService} from '@ngx-translate/core';
@@ -27,6 +28,7 @@ const baseFilterFactory = () => {
   return {
     filter: SimpleFilter.fromCaseQuery({
       process: {identifier: 'vehicle'},
+      query: 'dataSet.is_created.booleanValue:true'
     })
   };
 };
@@ -39,6 +41,15 @@ const baseFilterFactory = () => {
     CategoryFactory,
     CaseViewService,
     SearchService,
+    {
+      provide: NAE_DEFAULT_HEADERS, useValue: [
+        'meta-title',
+        'vehicle-licenceNumber',
+        'vehicle-manufacturer',
+        'vehicle-model',
+        'meta-creationDate'
+      ]
+    },
     {
       provide: NAE_BASE_FILTER,
       useFactory: baseFilterFactory

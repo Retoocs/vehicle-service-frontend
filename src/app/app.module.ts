@@ -28,7 +28,6 @@ import {TemplateFrontendConfigurationService} from './template-frontend-configur
 import {TemplateFrontendViewService} from './template-frontend-view.service';
 import {LoginComponent} from './views/login/login.component';
 import {SidenavComponent} from './views/side-nav/sidenav.component';
-import {EmptyViewComponent} from './views/side-nav/emptyView/empty-view.component';
 import {
   SideNavAllcasesContent0TaskViewComponent
 } from './views/side-nav/allCases/content/0/side-nav-allcases-content0-task-view.component';
@@ -87,7 +86,6 @@ import {RoleAssignmentComponent} from './views/side-nav/roleAssignment/role-assi
     AppComponent,
     LoginComponent,
     SidenavComponent,
-    EmptyViewComponent,
     SideNavAllcasesContent0TaskViewComponent,
     SideNavAllcasesContent1CaseViewComponent,
     AllcasesComponent,
@@ -147,7 +145,6 @@ import {RoleAssignmentComponent} from './views/side-nav/roleAssignment/role-assi
     NewCaseComponent,
     LoginComponent,
     SidenavComponent,
-    EmptyViewComponent,
     SideNavAllcasesContent0TaskViewComponent,
     SideNavAllcasesContent1CaseViewComponent,
     AllcasesComponent,

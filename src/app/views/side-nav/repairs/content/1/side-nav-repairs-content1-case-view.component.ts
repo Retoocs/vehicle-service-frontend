@@ -14,6 +14,7 @@ import {
   SimpleFilter, SnackBarService,
   TabbedCaseView,
   ViewIdService,
+  NAE_DEFAULT_HEADERS,
 } from '@netgrif/components-core';
 import {HeaderComponent} from '@netgrif/components';
 import {Observable, Subject} from 'rxjs';
@@ -39,6 +40,16 @@ const baseFilterFactory = () => {
     CategoryFactory,
     CaseViewService,
     SearchService,
+    {
+      provide: NAE_DEFAULT_HEADERS, useValue: [
+        'meta-title',
+        'repair-priority',
+        'repair-status',
+        'repair-selected_vehicle_title',
+        'repair-selected_customer_title',
+        'meta-creationDate'
+      ]
+    },
     {
       provide: NAE_BASE_FILTER,
       useFactory: baseFilterFactory
