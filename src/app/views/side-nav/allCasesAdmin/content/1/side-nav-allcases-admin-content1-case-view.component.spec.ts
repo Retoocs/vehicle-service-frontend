@@ -14,7 +14,7 @@ import {HttpClientTestingModule} from '@angular/common/http/testing';
 import {TemplateFrontendConfigurationService} from '../../../../../template-frontend-configuration.service';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-describe('SideNavAllcasesContent1CaseViewComponent', () => {
+describe('SideNavAllcasesAdminContent1CaseViewComponent', () => {
   let component: SideNavAllcasesAdminContent1CaseViewComponent;
   let fixture: ComponentFixture<SideNavAllcasesAdminContent1CaseViewComponent>;
 

@@ -12,7 +12,7 @@ import {HeaderComponentModule, PanelComponentModule,} from '@netgrif/components'
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {TemplateFrontendConfigurationService} from '../../../../../template-frontend-configuration.service';
 
-describe('SideNavAllcasesContent0TaskViewComponent', () => {
+describe('SideNavAllcasesAdminContent0TaskViewComponent', () => {
   let component: SideNavAllcasesAdminContent0TaskViewComponent;
   let fixture: ComponentFixture<SideNavAllcasesAdminContent0TaskViewComponent>;
 

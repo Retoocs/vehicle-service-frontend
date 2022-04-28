@@ -28,9 +28,9 @@ const baseFilterFactory = () => {
 };
 
 @Component({
-  selector: 'app-side-nav-allcases-content1-case-view',
-  templateUrl: './side-nav-allcases-content1-case-view.component.html',
-  styleUrls: ['./side-nav-allcases-content1-case-view.component.scss'],
+  selector: 'app-side-nav-allcases-admin-content1-case-view',
+  templateUrl: './side-nav-allcases-admin-content1-case-view.component.html',
+  styleUrls: ['./side-nav-allcases-admin-content1-case-view.component.scss'],
   providers: [
     CategoryFactory,
     CaseViewService,

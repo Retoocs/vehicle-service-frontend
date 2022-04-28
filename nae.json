@@ -125,21 +125,10 @@
                                     },
                                     "label": {
                                         "icon": "storage",
-                                        "text": "All Cases"
+                                        "text": "All Cases - Admin"
                                     },
                                     "canBeClosed": false,
                                     "order": -2
-                                },
-                                {
-                                    "view": {
-                                        "name": "caseView"
-                                    },
-                                    "label": {
-                                        "icon": "face",
-                                        "text": "My Cases"
-                                    },
-                                    "canBeClosed": false,
-                                    "order": -1
                                 }
                             ],
                             "defaultTaskView": {
@@ -152,7 +141,7 @@
                     "access": "private",
                     "navigation": {
                         "icon": "home",
-                        "title": "All cases admin"
+                        "title": "All cases - Admin"
                     },
                     "routing": {
                         "path": "allcasesAdmin"

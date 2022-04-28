@@ -26,9 +26,9 @@ const baseFilterFactory = (injectedTabData: InjectedTabbedTaskViewData) => {
 };
 
 @Component({
-  selector: 'app-side-nav-allcases-content0-task-view',
-  templateUrl: './side-nav-allcases-content0-task-view.component.html',
-  styleUrls: ['./side-nav-allcases-content0-task-view.component.scss'],
+  selector: 'app-side-nav-allcases-admin-content0-task-view',
+  templateUrl: './side-nav-allcases-admin-content0-task-view.component.html',
+  styleUrls: ['./side-nav-allcases-admin-content0-task-view.component.scss'],
   providers: [
     CategoryFactory,
     TaskViewService,
