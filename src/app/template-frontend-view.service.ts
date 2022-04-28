@@ -4,7 +4,6 @@ import {ConfigurationService, LoggerService, ViewService} from '@netgrif/compone
 import {LoginComponent} from './views/login/login.component';
 import {SignupComponent} from './views/signup/signup.component';
 import {SidenavComponent} from './views/side-nav/sidenav.component';
-import {EmptyViewComponent} from './views/side-nav/emptyView/empty-view.component';
 import { AllcasesComponent } from './views/side-nav/allCases/allcases.component';
 import { AllcasesAdminComponent } from './views/side-nav/allCasesAdmin/allcases-admin.component';
 import {VehiclesComponent} from './views/side-nav/vehicles/vehicles-case.component';
@@ -31,7 +30,6 @@ export class TemplateFrontendViewService extends ViewService {
       {id: 'WarehousesComponent', class: WarehousesComponent},
       {id: 'RepairsComponent', class: RepairsComponent},
       {id: 'RequestsComponent', class: RequestsComponent},
-      {id: 'EmptyViewComponent', class: EmptyViewComponent},
       {id: 'SidenavComponent', class: SidenavComponent},
       {id: 'LoginComponent', class: LoginComponent},
       {id: 'SignupComponent', class: SignupComponent},
