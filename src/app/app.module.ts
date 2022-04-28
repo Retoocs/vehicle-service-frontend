@@ -38,7 +38,15 @@ import {
 import {
   SideNavAllcasesContent2CaseViewComponent
 } from './views/side-nav/allCases/content/2/side-nav-allcases-content2-case-view.component';
+
+import {
+  SideNavAllcasesAdminContent0TaskViewComponent
+} from './views/side-nav/allCasesAdmin/content/0/side-nav-allcases-admin-content0-task-view.component';
+import {
+  SideNavAllcasesAdminContent1CaseViewComponent
+} from './views/side-nav/allCasesAdmin/content/1/side-nav-allcases-admin-content1-case-view.component';
 import {AllcasesComponent} from './views/side-nav/allCases/allcases.component';
+import { AllcasesAdminComponent } from './views/side-nav/allCasesAdmin/allcases-admin.component';
 import {
   SideNavVehiclesContent0TaskViewComponent
 } from './views/side-nav/vehicles/content/0/side-nav-vehicles-content0-task-view.component';
@@ -88,6 +96,9 @@ import {RoleAssignmentComponent} from './views/side-nav/roleAssignment/role-assi
     SideNavAllcasesContent1CaseViewComponent,
     SideNavAllcasesContent2CaseViewComponent,
     AllcasesComponent,
+    SideNavAllcasesAdminContent0TaskViewComponent,
+    SideNavAllcasesAdminContent1CaseViewComponent,
+    AllcasesAdminComponent,
     SideNavVehiclesContent0TaskViewComponent,
     SideNavVehiclesContent1CaseViewComponent,
     VehiclesComponent,
@@ -146,6 +157,9 @@ import {RoleAssignmentComponent} from './views/side-nav/roleAssignment/role-assi
     SideNavAllcasesContent1CaseViewComponent,
     SideNavAllcasesContent2CaseViewComponent,
     AllcasesComponent,
+    SideNavAllcasesAdminContent0TaskViewComponent,
+    SideNavAllcasesAdminContent1CaseViewComponent,
+    AllcasesAdminComponent,
     SideNavVehiclesContent0TaskViewComponent,
     SideNavVehiclesContent1CaseViewComponent,
     VehiclesComponent,
