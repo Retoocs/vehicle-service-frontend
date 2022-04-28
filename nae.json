@@ -1,368 +1,390 @@
 {
-    "$schema": "node_modules/@netgrif/components-core/src/schema/nae-schema.json",
-    "extends": "nae-default",
-    "providers": {
-        "auth": {
-            "address": "http://localhost:8080/api",
-            "authentication": "Basic",
-            "endpoints": {
-                "login": "/auth/login",
-                "logout": "/auth/logout",
-                "signup": "/auth/signup"
-            },
-            "sessionBearer": "X-Auth-Token"
-        },
-        "resources": [{
-                "name": "main",
-                "address": "http://localhost:8080/api"
-            },
-            {
-                "name": "case",
-                "address": "http://localhost:8080/api"
-            },
-            {
-                "name": "task",
-                "address": "http://localhost:8080/api"
-            },
-            {
-                "name": "petrinet",
-                "address": "http://localhost:8080/api"
-            },
-            {
-                "name": "user",
-                "address": "http://localhost:8080/api"
-            }
-        ]
+  "$schema": "node_modules/@netgrif/components-core/src/schema/nae-schema.json",
+  "extends": "nae-default",
+  "providers": {
+    "auth": {
+      "address": "http://localhost:8080/api",
+      "authentication": "Basic",
+      "endpoints": {
+        "login": "/auth/login",
+        "logout": "/auth/logout",
+        "signup": "/auth/signup",
+        "invite": "/auth/invite",
+        "verify": "/auth/token/verify"
+      },
+      "sessionBearer": "X-Auth-Token"
     },
-    "views": {
-        "login": {
-            "layout": {
-                "name": "login",
-                "componentName": "Login"
-            },
-            "component": {
-                "class": "LoginComponent",
-                "from": "./views/login/login.component"
-            },
-            "access": "public",
-            "navigation": false,
-            "routing": {
-                "path": "login"
-            }
-        },
-        "side-nav": {
-            "layout": {
-                "name": "sidenavView",
-                "componentName": "Sidenav",
-                "params": {
-                    "user": true,
-                    "quickPanel": true,
-                    "navigation": true
+    "resources": [
+      {
+        "name": "main",
+        "address": "http://localhost:8080/api"
+      },
+      {
+        "name": "case",
+        "address": "http://localhost:8080/api"
+      },
+      {
+        "name": "task",
+        "address": "http://localhost:8080/api"
+      },
+      {
+        "name": "petrinet",
+        "address": "http://localhost:8080/api"
+      },
+      {
+        "name": "user",
+        "address": "http://localhost:8080/api"
+      }
+    ]
+  },
+  "views": {
+    "login": {
+      "layout": {
+        "name": "login",
+        "componentName": "Login"
+      },
+      "component": {
+        "class": "LoginComponent",
+        "from": "./views/login/login.component"
+      },
+      "access": "public",
+      "navigation": false,
+      "routing": {
+        "path": "login"
+      }
+    },
+    "signup": {
+      "layout": {
+        "name": "signup",
+        "componentName": "Signup"
+      },
+      "component": {
+        "class": "SignupComponent",
+        "from": "./views/signup/signup.component"
+      },
+      "access": "public",
+      "navigation": false,
+      "routing": {
+        "path": "signup/:token"
+      }
+    },
+    "side-nav": {
+      "layout": {
+        "name": "sidenavView",
+        "componentName": "Sidenav",
+        "params": {
+          "user": true,
+          "quickPanel": true,
+          "navigation": true
+        }
+      },
+      "component": {
+        "class": "SidenavComponent",
+        "from": "./views/side-nav/side-nav-sidenav-view.component"
+      },
+      "access": "private",
+      "navigation": false,
+      "routing": {
+        "path": ""
+      },
+      "children": {
+        "allcases": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "allcases",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "All Cases"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                },
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "face",
+                    "text": "My Cases"
+                  },
+                  "canBeClosed": false,
+                  "order": -1
                 }
-            },
-            "component": {
-                "class": "SidenavComponent",
-                "from": "./views/side-nav/side-nav-sidenav-view.component"
-            },
-            "access": "private",
-            "navigation": false,
-            "routing": {
-                "path": ""
-            },
-            "children": {
-                "allcases": {
-                    "layout": {
-                        "name": "tabView",
-                        "componentName": "allcases",
-                        "params": {
-                            "tabs": [{
-                                    "view": {
-                                        "name": "caseView"
-                                    },
-                                    "label": {
-                                        "icon": "storage",
-                                        "text": "All Cases"
-                                    },
-                                    "canBeClosed": false,
-                                    "order": -2
-                                },
-                                {
-                                    "view": {
-                                        "name": "caseView"
-                                    },
-                                    "label": {
-                                        "icon": "face",
-                                        "text": "My Cases"
-                                    },
-                                    "canBeClosed": false,
-                                    "order": -1
-                                }
-                            ],
-                            "defaultTaskView": {
-                                "view": {
-                                    "name": "taskView"
-                                }
-                            }
-                        }
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "home",
-                        "title": "All cases"
-                    },
-                    "routing": {
-                        "path": "allcases"
-                    }
-                },
-                "allcasesAdmin": {
-                    "layout": {
-                        "name": "tabView",
-                        "componentName": "allcasesAdmin",
-                        "params": {
-                            "tabs": [{
-                                    "view": {
-                                        "name": "caseView"
-                                    },
-                                    "label": {
-                                        "icon": "storage",
-                                        "text": "All Cases - Admin"
-                                    },
-                                    "canBeClosed": false,
-                                    "order": -2
-                                }
-                            ],
-                            "defaultTaskView": {
-                                "view": {
-                                    "name": "taskView"
-                                }
-                            }
-                        }
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "home",
-                        "title": "All cases - Admin"
-                    },
-                    "routing": {
-                        "path": "allcasesAdmin"
-                    }
-                },
-                "vehicles": {
-                    "layout": {
-                        "name": "tabView",
-                        "componentName": "vehicles",
-                        "params": {
-                            "tabs": [{
-                                "view": {
-                                    "name": "caseView"
-                                },
-                                "label": {
-                                    "icon": "storage",
-                                    "text": "Vehicles"
-                                },
-                                "canBeClosed": false,
-                                "order": -2
-                            }],
-                            "defaultTaskView": {
-                                "view": {
-                                    "name": "taskView"
-                                }
-                            }
-                        }
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "directions_car",
-                        "title": "Vehicles"
-                    },
-                    "routing": {
-                        "path": "vehicles"
-                    }
-                },
-                "customers": {
-                    "layout": {
-                        "name": "tabView",
-                        "componentName": "customers",
-                        "params": {
-                            "tabs": [{
-                                "view": {
-                                    "name": "caseView"
-                                },
-                                "label": {
-                                    "icon": "storage",
-                                    "text": "Customers"
-                                },
-                                "canBeClosed": false,
-                                "order": -2
-                            }],
-                            "defaultTaskView": {
-                                "view": {
-                                    "name": "taskView"
-                                }
-                            }
-                        }
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "people_alt",
-                        "title": "Customers"
-                    },
-                    "routing": {
-                        "path": "customers"
-                    }
-                },
-                "warehouses": {
-                    "layout": {
-                        "name": "tabView",
-                        "componentName": "warehouses",
-                        "params": {
-                            "tabs": [{
-                                "view": {
-                                    "name": "caseView"
-                                },
-                                "label": {
-                                    "icon": "storage",
-                                    "text": "Warehouses"
-                                },
-                                "canBeClosed": false,
-                                "order": -2
-                            }],
-                            "defaultTaskView": {
-                                "view": {
-                                    "name": "taskView"
-                                }
-                            }
-                        }
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "warehouse",
-                        "title": "Warehouses"
-                    },
-                    "routing": {
-                        "path": "warehouses"
-                    }
-                },
-                "repairs": {
-                    "layout": {
-                        "name": "tabView",
-                        "componentName": "repairs",
-                        "params": {
-                            "tabs": [{
-                                "view": {
-                                    "name": "caseView"
-                                },
-                                "label": {
-                                    "icon": "storage",
-                                    "text": "Repairs"
-                                },
-                                "canBeClosed": false,
-                                "order": -2
-                            }],
-                            "defaultTaskView": {
-                                "view": {
-                                    "name": "taskView"
-                                }
-                            }
-                        }
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "car_repair",
-                        "title": "Repairs"
-                    },
-                    "routing": {
-                        "path": "repairs"
-                    }
-                },
-                "requests": {
-                    "layout": {
-                        "name": "tabView",
-                        "componentName": "requests",
-                        "params": {
-                            "tabs": [{
-                                "view": {
-                                    "name": "caseView"
-                                },
-                                "label": {
-                                    "icon": "storage",
-                                    "text": "Requests"
-                                },
-                                "canBeClosed": false,
-                                "order": -2
-                            }],
-                            "defaultTaskView": {
-                                "view": {
-                                    "name": "taskView"
-                                }
-                            }
-                        }
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "mark_email_unread",
-                        "title": "Requests"
-                    },
-                    "routing": {
-                        "path": "requests"
-                    }
-                },
-                "emptyView": {
-                    "layout": {
-                        "name": "emptyView",
-                        "componentName": "EmptyView"
-                    },
-                    "access": "private",
-                    "navigation": {
-                        "icon": "clear",
-                        "title": "EmptyView"
-                    },
-                    "routing": {
-                        "path": "settings"
-                    }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
                 }
+              }
             }
-        }
-    },
-    "theme": {
-        "name": "default",
-        "pallets": {
-            "light": {
-                "primary": "#2196F3",
-                "secondary": "#FFC107",
-                "warn": "red"
-            }
-        }
-    },
-    "assets": [
-        "src/assets"
-    ],
-    "filters": {
-        "all-cases": {
-            "title": "All Cases",
-            "access": "public",
-            "query": {},
-            "type": "Case"
-        }
-    },
-    "i18n": [
-        "sk-SK",
-        "de-DE",
-        "en-US"
-    ],
-    "services": {
-        "auth": {
-            "logoutRedirect": "login",
-            "loginRedirect": "login"
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "home",
+            "title": "All cases"
+          },
+          "routing": {
+            "path": "allcases"
+          }
         },
-        "log": {
-            "level": "DEBUG",
-            "logWithDate": true,
-            "serializeExtraParams": true,
-            "includeLogLevel": true,
-            "publishers": [
-                "console"
+        "vehicles": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "vehicles",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Vehicles"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "directions_car",
+            "title": "Vehicles"
+          },
+          "routing": {
+            "path": "vehicles"
+          }
+        },
+        "customers": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "customers",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Customers"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "people_alt",
+            "title": "Customers"
+          },
+          "routing": {
+            "path": "customers"
+          }
+        },
+        "warehouses": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "warehouses",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Warehouses"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "warehouse",
+            "title": "Warehouses"
+          },
+          "routing": {
+            "path": "warehouses"
+          }
+        },
+        "repairs": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "repairs",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Repairs"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "car_repair",
+            "title": "Repairs"
+          },
+          "routing": {
+            "path": "repairs"
+          }
+        },
+        "requests": {
+          "layout": {
+            "name": "tabView",
+            "componentName": "requests",
+            "params": {
+              "tabs": [
+                {
+                  "view": {
+                    "name": "caseView"
+                  },
+                  "label": {
+                    "icon": "storage",
+                    "text": "Requests"
+                  },
+                  "canBeClosed": false,
+                  "order": -2
+                }
+              ],
+              "defaultTaskView": {
+                "view": {
+                  "name": "taskView"
+                }
+              }
+            }
+          },
+          "access": "private",
+          "navigation": {
+            "icon": "mark_email_unread",
+            "title": "Requests"
+          },
+          "routing": {
+            "path": "requests"
+          }
+        },
+        "user-invite": {
+          "layout": {
+            "name": "user-invite",
+            "componentName": "UserInvite"
+          },
+          "access": {
+            "role": [
+              "is_admin.Admin"
             ]
+          },
+          "navigation": {
+            "icon": "send",
+            "title": "User invite"
+          },
+          "routing": {
+            "path": "invite"
+          }
+        },
+        "role-assignment": {
+          "layout": {
+            "name": "role-assignment",
+            "componentName": "RoleAssignment"
+          },
+          "access": {
+            "role": [
+              "is_admin.Admin"
+            ]
+          },
+          "navigation": {
+            "icon": "add",
+            "title": "Role assignment"
+          },
+          "routing": {
+            "path": "role-assignment"
+          }
         }
+      }
     }
+  },
+  "theme": {
+    "name": "default",
+    "pallets": {
+      "light": {
+        "primary": "#2196F3",
+        "secondary": "#FFC107",
+        "warn": "red"
+      }
+    }
+  },
+  "assets": [
+    "src/assets"
+  ],
+  "filters": {
+    "all-cases": {
+      "title": "All Cases",
+      "access": "public",
+      "query": {},
+      "type": "Case"
+    }
+  },
+  "i18n": [
+    "sk-SK",
+    "de-DE",
+    "en-US"
+  ],
+  "services": {
+    "auth": {
+      "logoutRedirect": "login",
+      "loginRedirect": "login"
+    },
+    "log": {
+      "level": "DEBUG",
+      "logWithDate": true,
+      "serializeExtraParams": true,
+      "includeLogLevel": true,
+      "publishers": [
+        "console"
+      ]
+    },
+    "legal": {
+      "termsOfService": "https://netgrif.com/",
+      "privacyPolicy": "https://netgrif.com/"
+    }
+  }
 }

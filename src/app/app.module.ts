@@ -7,14 +7,17 @@ import {AuthenticationModule, ConfigurationService, MaterialModule, TranslateLib
 import {FlexLayoutModule, FlexModule} from '@angular/flex-layout';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import {
+  AdminComponentModule,
   AuthenticationComponentModule,
   CaseViewComponentModule,
   HeaderComponentModule,
+  LegalNoticeModule,
   LoginFormComponentModule,
   NavigationComponentModule,
   NewCaseComponent,
   PanelComponentModule,
   QuickPanelComponentModule,
+  RegistrationFormComponentModule,
   SearchComponentModule,
   SideMenuComponentModule,
   SideMenuContentComponentModule,
@@ -79,7 +82,9 @@ import {
   SideNavRequestsContent1CaseViewComponent
 } from './views/side-nav/requests/content/1/side-nav-requests-content1-case-view.component';
 import {RequestsComponent} from './views/side-nav/requests/requests-case.component';
-
+import {UserInviteComponent} from './views/side-nav/userInvite/user-invite.component';
+import {SignupComponent} from './views/signup/signup.component';
+import {RoleAssignmentComponent} from './views/side-nav/roleAssignment/role-assignment.component';
 
 @NgModule({
   declarations: [
@@ -109,6 +114,9 @@ import {RequestsComponent} from './views/side-nav/requests/requests-case.compone
     SideNavRequestsContent0TaskViewComponent,
     SideNavRequestsContent1CaseViewComponent,
     RequestsComponent,
+    UserInviteComponent,
+    SignupComponent,
+    RoleAssignmentComponent,
   ],
   imports: [
     BrowserModule,
@@ -130,7 +138,10 @@ import {RequestsComponent} from './views/side-nav/requests/requests-case.compone
     CaseViewComponentModule,
     SearchComponentModule,
     QuickPanelComponentModule,
-    TabsComponentModule
+    TabsComponentModule,
+    AdminComponentModule,
+    RegistrationFormComponentModule,
+    LegalNoticeModule,
   ],
   providers: [
     {provide: ConfigurationService, useClass: TemplateFrontendConfigurationService},
@@ -164,6 +175,9 @@ import {RequestsComponent} from './views/side-nav/requests/requests-case.compone
     SideNavRequestsContent0TaskViewComponent,
     SideNavRequestsContent1CaseViewComponent,
     RequestsComponent,
+    UserInviteComponent,
+    SignupComponent,
+    RoleAssignmentComponent,
   ]
 })
 export class AppModule {
