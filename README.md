@@ -12,3 +12,4 @@ This is the frontend.
     ```sh
     npm install --force
     ```
+3. Set your backend URL address in ``nae.json``.
