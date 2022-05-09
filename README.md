@@ -4,11 +4,11 @@ This is the frontend.
 
 # Installation
 
-1. Clone the repo
+1. Clone the repository:
     ```sh
     git clone https://github.com/Retoocs/vehicle-service-frontend.git
     ```
-2. Install NPM packages
+2. Install NPM packages:
     ```sh
     npm install --force
     ```
