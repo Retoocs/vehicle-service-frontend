@@ -26,6 +26,7 @@ const baseFilterFactory = () => {
   return {
     filter: SimpleFilter.fromCaseQuery({
       process: {identifier: 'repair'},
+      query: 'dataSet.public_status_extern_text.fulltextValue.keyword:"sent"'
     })
   };
 };
