@@ -42,7 +42,7 @@ const baseFilterFactory = () => {
     SearchService,
     {
       provide: NAE_DEFAULT_HEADERS, useValue: [
-        'meta-title',
+        'repair-description',
         'repair-priority',
         'repair-status',
         'repair-selected_vehicle_title',
